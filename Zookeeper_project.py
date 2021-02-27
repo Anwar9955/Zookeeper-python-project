@@ -119,9 +119,19 @@ Switching on the camera in the rabbit habitat...
 (" ~----( ~   Y.  )
 It looks like we will soon have more rabbits!"""
 
-print('Please enter the number of the habitat you would like to view:<0-5>')
-animal = int(input())
-animal_list = [camel,lion,deer,goose,bat,rabbit]
-print(animal_list[animal])
-print('---')
-print("You've reached the end of the program. To check another habitat, please restart the watcher.")
+
+animals = [camel, lion, deer, goose, bat, rabbit]
+ 
+
+while True:
+   print('Please enter the number of the habitat you would like to view:',end = '')
+   user_input = input()
+   if user_input == 'exit':
+      print('See you later!')
+      exit()
+   print('')
+   user_input = int(user_input)
+   print(animals[user_input])
+   
+
+   
